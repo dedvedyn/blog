@@ -245,21 +245,40 @@ main {
   font-size: 14px;
   line-height: 27px;
 }
-.col_read-more {
+.col_read-more a {
   position: absolute;
   width: 130px;
   height: 30px;
   top: 350px;
   left: 115px;
   text-align: center;
-  color: #212121;
   font-weight: normal;
   letter-spacing: 2px;
   font-size: 13px;
-  line-height: 33px;
+  line-height: 32px;
   border-left: 1px solid #999999;
   border-right: 1px solid #999999;
+  text-decoration: none;
+  color: #212121;
 }
+.col_read-more a:before {
+  content: "";
+  display: none;
+  position: absolute;
+  left: 35%;
+  bottom: 0px;
+  height: 30px;
+  width: 30%;
+  border-bottom: 1px solid #999999;
+  border-top: 1px solid #999999;
+}
+.col_read-more a:hover:before {
+  display: block;
+}
+.col_read-more a:hover {
+	border: none;
+}
+
 .col_comments {
   position: absolute;
   width: 100%;
@@ -318,19 +337,6 @@ main {
   clear: both;
   display: block;
 }
-.col_read-more-border {
-	border: none;
-}
-.col_read-more-border:before {
-  content: "";
-  position: absolute;
-  left: 35%;
-  bottom: 0;
-  height: 30px;
-  width: 30%;
-  border-bottom: 1px solid #999999;
-  border-top: 1px solid #999999;
-}
 .col_content-6 {
 	width: 100%;
 	height: 100%;
@@ -349,7 +355,7 @@ main {
 .col_link-11 {
 	width: 100%;
 	height: 100%;
-	padding: 65px 30px 0 30px;
+	padding: 65px 35px 0 35px;
 }
 .col_link-11 a {
 	display: block;
@@ -359,8 +365,8 @@ main {
 	letter-spacing: 2px;
 	font-size: 15px;
 	line-height: 25px;
+	word-wrap: break-word;
 }
-
 
 footer {
   width: 100%;
